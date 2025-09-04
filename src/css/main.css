@@ -1,1 +1,71 @@
-/* Your CSS here. */
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 650px;
+  height: 520px;
+  background-color: #f4edfd;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 12px 0 4px;
+}
+
+h3 {
+  margin: 0;
+  color: #555;
+}
+
+p {
+  margin: 12px 0;
+  color: #333;
+}
+
+a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #8e57e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+a:hover {
+  background-color: #723cc8;
+}
+
+.controls {
+  margin-top: 40px;
+}
+
+.controls button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #bbb;
+}

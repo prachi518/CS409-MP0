@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MP 0</title>
+  <title>My Profile Card</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <h1>Hello World!</h1>
-  <img src="assets/image.jpg" />
+  <div class="card">
+    <img src="assets/me.jpeg" alt="Your photo" class="avatar">
+    <h1>Prachi Singh</h1>
+    <h3><em>prachi5@illinois.edu</em></h3>
+    <a href="https://github.com/prachi518" target="_blank">GitHub</a>
+    <p>
+      MCS Student at UIUC with 2+ years of experience building scalable backend systems using Java, Python, and AWS. 
+      Delivered production-grade applications in financial domains, reducing system latency and manual effort through automation and architectural optimizations. 
+      Passionate about crafting clean, maintainable, and customer-centric solutions. Actively mentored junior developers and led cross-functional projects. 
+      Looking to grow in a role that combines technical leadership, collaboration, 
+      and impact at scale.
+    </p>
 
-  <script src="bundle.js" type="text/javascript"></script>
+    <!-- optional buttons for JS -->
+    <div class="controls">
+      <button id="surpriseBtn">Toggle Theme</button>
+    </div>
+  </div>
+  <script src="bundle.js" type="text/javascript"></script> 
 </body>
-
 </html>
