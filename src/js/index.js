@@ -1,19 +1,20 @@
-/* Your JS here. */
-const surpriseBtn = document.getElementById("surpriseBtn");
+// Toggle bio when avatar is clicked
+const avatar = document.getElementById("avatar");
+const bio = document.getElementById("bio");
+
+// Change card color when button is clicked
 const card = document.querySelector(".card");
-const link = card.querySelector("a");
+const buttons = document.querySelectorAll(".controls button");
 
-if (surpriseBtn) {
-  const palettes = [
-    ["#6d28d9", "#0ea5e9"],
-    ["#ef4444", "#f59e0b"],
-    ["#10b981", "#3b82f6"],
-    ["#f472b6", "#a78bfa"]
-  ];
+avatar.addEventListener("click", () => {
+  bio.classList.toggle("hidden");
+  card.classList.toggle("collapsed");
+});
 
-  surpriseBtn.addEventListener("click", () => {
-    const [a, b] = palettes[Math.floor(Math.random() * palettes.length)];
-    card.style.background = `linear-gradient(180deg, ${a}22, ${b}22), #fff`;
-    link.style.background = `linear-gradient(135deg, ${a}, ${b})`;
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    card.classList.remove("red", "blue", "green");
+    const color = btn.getAttribute("data-color");
+    card.classList.add(color);
   });
-}
+});

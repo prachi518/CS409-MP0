@@ -1,4 +1,4 @@
-body {
+ body {
   margin: 0;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: #ffffff;
@@ -10,12 +10,18 @@ body {
 
 .card {
   width: 650px;
-  height: 520px;
+  min-height: 300px;
   background-color: #f4edfd;
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
   padding: 20px;
+  overflow: hidden;
+}
+
+/* collapsed card */
+.card.collapsed {
+  height: 400px; /* smaller height when bio is hidden */
 }
 
 .avatar {
@@ -23,6 +29,8 @@ body {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  border: 4px solid #fff;
+  cursor: pointer; /* show it's clickable */
 }
 
 h1 {
@@ -43,18 +51,18 @@ a {
   display: inline-block;
   margin-top: 12px;
   padding: 8px 16px;
-  background-color: #8e57e5;
+  background-color: #803dec;
   color: white;
   text-decoration: none;
   border-radius: 8px;
 }
 
 a:hover {
-  background-color: #723cc8;
+  background-color: #5b21b6;
 }
 
 .controls {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .controls button {
@@ -64,8 +72,27 @@ a:hover {
   border-radius: 6px;
   background: #ddd;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .controls button:hover {
   background: #bbb;
+}
+
+/* Color themes */
+.card.red {
+  background: #e98881;
+}
+
+.card.blue {
+  background: #9edae6;
+}
+
+.card.green {
+  background: #82d197;
+}
+
+/* Hide bio when collapsed */
+#bio.hidden {
+  display: none;
 }
